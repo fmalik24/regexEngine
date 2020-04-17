@@ -1,5 +1,5 @@
-let input = `Be the you want change  you wish to see  in the world. Mahatma Gandhi Mahatma Mahatma change to 1Mahatma`;
-let regex = "Be.*?change.*?Mahatma";
+let input = `123 as 1!@#! $@#$   Be the you want change  you wish to see  in the world. Mahatma Gandhi Mahatma Mahatma change to 1Mahatma 1 1`;
+let regex = "change.*Mahatma.*1";
 let patterns = regex.split(".*")
 
 let isGreedy = true;
@@ -33,10 +33,6 @@ function wildCard(behind, ahead, isLast, isGreedy) {
         if (input.substr(i, ahead.length).includes(ahead)) {
             if (previousMatched && isLast && firstMatch >= 0) {
                 outputstring = input.substr(firstMatch, i + ahead.length - firstMatch)
-                if(outputstring.trim().length === 0) {
-                    console.log("what is going on here?")
-                }g
-                previousMatched = false;
                 display = true;
                 if (!isGreedy) {
                     break;
@@ -45,7 +41,7 @@ function wildCard(behind, ahead, isLast, isGreedy) {
         }
     }
  if(display) {
-        console.log("The output is: \n", outputstring)
+        console.log("The output is:\n", outputstring)
     }
     
     return firstMatch >= 0;
