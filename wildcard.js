@@ -5,7 +5,7 @@ let patterns = regex.split(".*")
 let isGreedy = true;
 let firstMatch = -1;
 let output = true;
-let allMatches = [];
+
 
 for (let i = 1; i < patterns.length; i++) {
     if (output) {
