@@ -3,12 +3,7 @@ alllaccc
 alllacccalllacccalllaccc
 alllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllaccc
 alllacccalllacccalllacccalllacccalllacccalllacccalllaccc asdasda asfasaa alllacccalllacccalllacccalllacccalllacccalllaccc alaccc alaccc`;
-let regex = "al*accc";
-
-// let input = "lcclclclcllclclcllllclcllclclclcllclclclclclclcllclcllccccclllcccclllllllcccclclclclcllclclcllclclclllllll clcl cclll. c c c c c c llll cc";
-// let regex = "l*c";
-let input1 = `aaaac ac aaaaaac cccc c a`;
-let regex1 = "a?ca"
+let regex = "al*a";
 
 if(regex.split("*").length===2){
     [start, end] = regex.split("*")
@@ -39,7 +34,7 @@ function wildCard(start, end, type) {
         }
         else if(input.substr(i, start.length) === start && type === "*") {
             for(let j = i + start.length-1; j < input.length; j++) {
-                if(input.substr(j,1) === startChar){
+                if(input.substr(j,startChar.length) === startChar){
                     thirdCase =  input.substr(i, start.length + counter)
                     counter++;
                 } else if(input.substr(j,end.length) === end) {
