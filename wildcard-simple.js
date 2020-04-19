@@ -1,4 +1,4 @@
-input = `bbasdasdasdmbbnbnasdbbnasdbnbnbnasdbnadbansdbnasdbjnabsd 
+input = `aaaabbasdasdasdmbbnbnasdbbnasdbnbnbnasdbnadbansdbnasdbjnabsd 
 sdasdasdmbbnbnasdbbnasdbnbnbnasdbnadbansdbnasdbjnabsd 
 sdasdasdmbbnbnasdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbnasdbnbnbnasdbnadbansdbnasdbjnabsd  
 basdbbnasdbnbnbnasbbbbbbbbbbbbbbbbbbbbbbbbbbdbnadbansdbnasdbjnabsd 
@@ -35,7 +35,6 @@ for (let i = 0; i < input.length; i++) {
                 break;
             } else {
                 matches.push(input.substr(i, start.length))
-              //  i = j
                 break;
             }
         }
