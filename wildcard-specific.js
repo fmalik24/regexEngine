@@ -5,6 +5,8 @@ alllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllaccc
 alllacccalllacccalllacccalllacccalllacccalllacccalllaccc asdasda asfasaa alllacccalllacccalllacccalllacccalllacccalllaccc alaccc alaccc`;
 let regex = "al*a";
 
+// allllla, aa, ala
+
 if(regex.split("*").length===2){
     [start, end] = regex.split("*")
     wildCard(start, end, "*")

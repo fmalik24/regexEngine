@@ -15,7 +15,7 @@ let counter = 0;
 for (let i = 0; i < input.length; i++) {
     if (start.length === 1) {
         if (input.substr(i, start.length) === start) {
-            for (let j = i + 1; j < input.length; j++) {
+            for (let j = i + start.length; j < input.length; j++) {
                 if (input.substr(j, start.length) === start) {
                     counter++;
                     if (j === input.length - 1) {
@@ -25,10 +25,9 @@ for (let i = 0; i < input.length; i++) {
                 } else if (input.substr(j, end.length) === end) {
                     matches.push(input.substr(i, counter + start.length + end.length))
                     counter = 0;
-                    i = j;
+                    i = j - 1 + end.length;
                     break;
                 } else {
-                
                     break;
                 }
 

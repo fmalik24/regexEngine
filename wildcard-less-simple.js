@@ -1,4 +1,5 @@
-let input = `abab bababab babab babbba b123[poarsgsf asf ] A aa S  cvbbvszbvcsvbcas bsbadfasd bbvvbvb vbv`
+let input = `abab bababab babab babbba b123[poarsgsf asf ] A aa S  a cvbbvszbvcsvbcas bsbadfasd bbvvbvb vbv`
+// abbbaa abbb ab a
 let regex = 'ab*'
 ;[before, ] = regex.split("*")
 let repeatCharacter = before[before.length - 1]
