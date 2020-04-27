@@ -1,11 +1,11 @@
-let input = `alaccc alllaccc allllllllllllaccc aaccc c a ca ac aa alc
+let input = `allla alaccc alllaccc allllllllllllaccc aaccc c a ca ac aa alc
 alllaccc
 alllacccalllacccalllaccc
 alllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllacccalllaccc
-alllacccalllacccalllacccalllacccalllacccalllacccalllaccc asdasda asfasaa alllacccalllacccalllacccalllacccalllacccalllaccc alaccc alaccc`;
-let regex = "al*a";
+alllacccalllacccalllacccalllacccalllacccalllacccalllaccc asdasda asfasaa alllacccalllacccalllacccalllacccalllacccalllaccc alaccc alaccc`
+let regex = "al*a"
 
-// allllla, aa, ala
+// allllla, aa, a;a 
 
 if(regex.split("*").length===2){
     [start, end] = regex.split("*")
@@ -34,6 +34,12 @@ function wildCard(start, end, type) {
             matches.push(input.substr(i, mainPatternLen))
             i = i + mainPatternLen - 1
         }
+
+
+
+        
+
+
         else if(input.substr(i, start.length) === start && type === "*") {
             for(let j = i + start.length-1; j < input.length; j++) {
                 if(input.substr(j,startChar.length) === startChar){
